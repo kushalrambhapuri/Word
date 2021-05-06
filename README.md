@@ -10,70 +10,55 @@ Then I have created a function called def create_menu_bar(self): and inside this
 Then I have created a function called def create_toolbar(self): and inside this function I have created a variable callled ToolBar and entered the value as QToolBar("Tools", self)Then after that undo action, redo action, copy action, cut action, paste action, set font action, set fon size action, bold action, underline action, italic action, right alignment action, left alignment action, justification action, zoom in action, zoom out action for all these actions I have given them a space and how to give them a space is just write ToolBar.addSeparator() after each action I have given four of thm each and these all actions I have written for triggered example if the bold action is triggered then what to do is written in the actions and the code for all these triggered actions with the seperators is undo_action = QAction(QIcon("undo.png"), 'Undo', self) undo_action.triggered.connect(self.editor.undo) ToolBar.addAction(undo_action) ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() redo_action = QAction(QIcon("redo.png"), 'Redo', self) redo_action.triggered.connect(self.editor.redo) ToolBar.addAction(redo_action) ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() copy_action = QAction(QIcon("copy.png"), 'Copy', self) copy_action.triggered.connect(self.editor.copy) ToolBar.addAction(copy_action) ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() cut_action = QAction(QIcon("cut.png"), 'Cut', self) cut_action.triggered.connect(self.editor.cut) ToolBar.addAction(cut_action) ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() paste_action = QAction(QIcon("paste.png"), 'Paste', self) paste_action.triggered.connect(self.editor.paste) ToolBar.addAction(paste_action) ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() self.font_combo = QComboBox(self) self.font_combo.addItems() ["Courier Std", "Hellentic Typewriter Regular", "Helvetica", "Arial", "SansSerif", "Helvetica", "Times", "Monospace"]) self.font_combo.activated.connect(self.set_font)  # connect with function toolBar.addWidget(self.font_combo)toolBar.addSeparator() ToolBar.addSeparator()  ToolBar.addSeparator() ToolBar.addSeparator() self.font_size = QSpinBox(self) self.font_size.setValue(12) self.font_size.valueChanged.connect(self.set_font_size)  # connect with funcion ToolBar.addWidget(self.font_size) toolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() ToolBar.addSeparator() bold_action = QAction(QIcon("bold.png"), 'Bold', self)
         bold_action.triggered.connect(self.bold_text)
         ToolBar.addAction(bold_action)
-
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
-
         underline_action = QAction(QIcon("underline.png"), 'Underline', self)
         underline_action.triggered.connect(self.underline_text)
         ToolBar.addAction(underline_action)
-
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
-
         italic_action = QAction(QIcon("italic.png"), 'Italic', self)
         italic_action.triggered.connect(self.italic_text)
         ToolBar.addAction(italic_action)
-
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
-
         right_alignment_action = QAction(QIcon("right-align.png"), 'Align Right', self)
         right_alignment_action.triggered.connect(lambda: self.editor.setAlignment(Qt.AlignRight))
         ToolBar.addAction(right_alignment_action)
-
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
-
         left_alignment_action = QAction(QIcon("left-align.png"), 'Align Left', self)
         left_alignment_action.triggered.connect(lambda: self.editor.setAlignment(Qt.AlignLeft))
         ToolBar.addAction(left_alignment_action)
-
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
-
         justification_action = QAction(QIcon("justification.png"), 'Center/Justify', self)
         justification_action.triggered.connect(lambda: self.editor.setAlignment(Qt.AlignCenter))
         ToolBar.addAction(justification_action)
-
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
-
         zoom_in_action = QAction(QIcon("zoom-in.png"), 'Zoom in', self)
         zoom_in_action.triggered.connect(self.editor.zoomIn)
         ToolBar.addAction(zoom_in_action)
-
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
-
         zoom_out_action = QAction(QIcon("zoom-out.png"), 'Zoom out', self)
         zoom_out_action.triggered.connect(self.editor.zoomOut)
         ToolBar.addAction(zoom_out_action)
-
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
