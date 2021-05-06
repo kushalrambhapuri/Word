@@ -1,4 +1,3 @@
-#Word
 Now you can ditch MS Word and make your own Word by 300 lines of python code it has very much functions like the MS Word!!
 I have done it by using Pycharm which is an python code editor.
 In the terminal first I have installed a pip(python installation package) called **pip install PyQt5**.
