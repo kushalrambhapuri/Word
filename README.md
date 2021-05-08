@@ -62,3 +62,50 @@ Then I have created a function called def create_toolbar(self): and inside this 
         ToolBar.addSeparator()
         ToolBar.addSeparator()
         ToolBar.addSeparator()
+Then after all this I have written self.addToolBar(ToolBar).
+And then for all these actions which are coded to trigger they all have a function created and the code is     def italic_text(self):
+            state = self.editor.fontItalic()
+            self.editor.setFontItalic(not (state))
+    def underline_text(self):
+            state = self.editor.fontUnderline()
+            self.editor.setFontUnderline(not (state))
+    def bold_text(self):
+            if self.editor.fontWeight() != QFont.Bold:
+                self.editor.setFontWeight(QFont.Bold)
+                return
+            self.editor.setFontWeight(QFont.Normal)
+    def set_font(self):
+        font = self.font_combo.currentText()
+        self.editor.setCurrentFont(QFont(font))
+    def set_font_size(self):
+        value = self.font_size.value()
+        self.editor.setFontPointSize(value)
+    def file_open(self):
+        self.path, _ = QFileDialog.getOpenFileName(self, "Open file", "",
+                                                   "Text documents (*.text);Text documents (*.txt);All files (*.*)")
+        self.editor.setText(text)
+        self.update_title()
+    def file_save(self):
+        print(self.path)
+        if self.path == '':
+            self.file_saveas()
+        text = self.editor.toPlainText()
+    def file_saveas(self):
+        self.path, _ = QFileDialog.getSaveFileName(self, "Save file", "",
+                                                   "text documents (*.text);Text documents (*.txt);All files (*.*)")
+        if self.path == '':
+            return
+        text = self.editor.toPlainText()
+    def update_title(self):
+        self.setWindowTitle(self.title + ' ' + self.path)
+    def save_pdf(self):
+        f_name, _ = QFileDialog.getSaveFileName(self, "Export PDF", None, "PDF files (.pdf);;All files()")
+        print(f_name).
+        Then I have created a if condition called if f_name != '': and inside this I have created a variable called printer and entered th value as QPrinter(QPrinter.HighResolution) and then I have written printer.setOutputFormat(QPrinter.PdfFormat)
+            printer.setOutputFileName(f_name)
+            self.editor.document().print_(printer).
+            And then to run the app and to show the window and to execute the app I have written app = QApplication(sys.argv)
+window = MainApp()
+window.show()
+sys.exit(app.exec_()).
+Now you are ready with your own Word now you can ditch MS Word!!
