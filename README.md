@@ -108,4 +108,4 @@ And then for all these actions which are coded to trigger they all have a functi
 window = MainApp()
 window.show()
 sys.exit(app.exec_()).
-Now you are ready with your own Word now you can ditch MS Word!!
+Now you are ready with your own Word now you can ditch MS Word!! Enjoy!!
